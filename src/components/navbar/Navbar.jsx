@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import { FiShoppingCart } from "react-icons/fi";
+import Logo from "../../assets/cart.png";
 
 function Navbar() {
 	const [open, setOpen] = useState(false);
@@ -21,7 +22,13 @@ function Navbar() {
 				{/*NAVBAR*/}
 				<nav className="navbar flex items-center justify-between py-4 px-4 shadow-xl shadow-gray-800">
 					{/*LOGO*/}
-					<h1 className="text-2xl font-bold">BlinkMart</h1>
+					<Link
+						to="/"
+						className="text-2xl font-bold flex items-center gap-2.5"
+					>
+						<img src={Logo} alt="blinkMart-logo" className="w-8" />
+						BlinkMart
+					</Link>
 
 					{/*NAV-LINKS*/}
 					<ul className="navlinks flex items-center gap-5">
