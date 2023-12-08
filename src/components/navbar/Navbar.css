@@ -1,7 +1,58 @@
 .active {
 	color: orange;
+	text-decoration: underline;
+	text-decoration-color: orange;
+	text-decoration-thickness: 1.5px;
+	text-underline-offset: 5px;
 }
 
-.navlinks {
-	font-weight: 500;
+#navlinks a:hover {
+	transform: translateY(-5px);
+	text-decoration: underline;
+	text-decoration-color: orange;
+	text-decoration-thickness: 1.5px;
+	text-underline-offset: 5px;
+	transition: all 0.2s;
+}
+.navlinks li:hover {
+	border-bottom: 1px orange solid;
+	transition: all 0.5s;
+}
+
+#hamburger {
+	display: none;
+}
+header {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: 5;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width: 800px) {
+	body {
+		position: relative;
+	}
+
+	#navlinks {
+		flex-direction: column;
+		position: absolute;
+		top: 90px;
+		height: calc(100vh - 90px);
+		padding: 30px;
+		align-items: start;
+		width: 200px;
+		border-left: 0.5px dimgray solid;
+		z-index: -1;
+		transition: all 0.4s;
+	}
+
+	#navlinks a:hover {
+		transform: translateY(0px);
+	}
+
+	#hamburger {
+		display: block;
+	}
 }
