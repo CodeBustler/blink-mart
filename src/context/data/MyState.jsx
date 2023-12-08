@@ -5,7 +5,7 @@ function MyState(props) {
 	const [mode, setMode] = useState("light");
 
 	const toggleMode = () => {
-		document.body.style.transition = "background-color 1s";
+		document.body.style.transition = "none ";
 		if (mode === "light") {
 			setMode("dark");
 			document.body.style.backgroundColor = "#212121";

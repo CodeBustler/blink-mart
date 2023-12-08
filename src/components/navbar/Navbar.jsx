@@ -13,12 +13,12 @@ function Navbar() {
 	const context = useContext(MyContext);
 	const { mode, toggleMode } = context;
 	const hideSideBar = () => setOpen(!open);
-
+	const isAuth = false;
 	return (
 		<>
 			<header
 				className={`${
-					mode === "light" ? "bg-white " : "bg-[#2f2f2f] "
+					mode === "light" ? "bg-[#F3F4F6] " : "bg-[#2f2f2f] "
 				}`}
 				id="header-container"
 			>
@@ -45,53 +45,87 @@ function Navbar() {
 
 					{/*NAV-LINKS*/}
 					<div
-						className={`flex items-center gap-4 text-md 
+						className={`flex items-center gap-6 text-md  font-semibold
 						${open ? "right-0  " : "right-[-300px] "} 
-						${mode === "light" ? "bg-white " : "bg-[#2f2f2f] "}`}
+						${mode === "light" ? "bg-[#F3F4F6] " : "bg-[#2f2f2f] "}`}
 						id="navlinks"
 						onClick={hideSideBar}
 					>
-						<NavLink to="/all_products" onClick={hideSideBar}>
+						<NavLink
+							to="/all_products"
+							onClick={hideSideBar}
+							className="page"
+						>
 							All Products
 						</NavLink>
-						<NavLink to="/order" onClick={hideSideBar}>
+						<NavLink
+							to="/order"
+							onClick={hideSideBar}
+							className="page"
+						>
 							Order
 						</NavLink>
-						<NavLink to="/dashboard" onClick={hideSideBar}>
+						<NavLink
+							to="/dashboard"
+							onClick={hideSideBar}
+							className="page"
+						>
 							Admin
 						</NavLink>
-						<NavLink to="" onClick={hideSideBar}>
-							Logout
-						</NavLink>
-						<NavLink to="" onClick={hideSideBar}>
-							Login
-						</NavLink>
-						<img
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrBWPQ3eQmMBLPFLRr5gLrySx-rrkp8NRK5mzynUlQL_8hQf9FbgxZaxRBDRw6Y3e_QhM&usqp=CAU"
-							alt=""
-							className="w-10 rounded-full"
-							onClick={hideSideBar}
-						/>
-
-						<div
-							onClick={toggleMode}
-							className=" cursor-pointer"
-							title="Light/Dark Mode"
-						>
-							{mode === "light" ? (
-								<MdOutlineLightMode className="text-3xl" />
-							) : (
-								<MdDarkMode className="text-3xl" />
-							)}
-						</div>
 						<NavLink
 							to="/cart"
-							className="flex items-center gap-2"
+							className="page flex items-center gap-2 "
 							onClick={hideSideBar}
 						>
 							<FiShoppingCart className="text-3xl" />
 							<span>10</span>
 						</NavLink>
+						<div
+							onClick={toggleMode}
+							className="cursor-pointer"
+							title="Light/Dark Mode"
+						>
+							{mode === "light" ? (
+								<MdOutlineLightMode className={`text-3xl `} />
+							) : (
+								<MdDarkMode className="text-3xl" />
+							)}
+						</div>
+
+						{isAuth ? (
+							<button
+								to=""
+								onClick={hideSideBar}
+								className={`px-5 py-2 rounded-md bg-green-600 hover:bg-green-800 active:bg-green-600 ${
+									mode === "light"
+										? "text-white"
+										: "text-white"
+								}`}
+							>
+								Login
+							</button>
+						) : (
+							<>
+								<img
+									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrBWPQ3eQmMBLPFLRr5gLrySx-rrkp8NRK5mzynUlQL_8hQf9FbgxZaxRBDRw6Y3e_QhM&usqp=CAU"
+									alt=""
+									className="w-10 rounded-full"
+									onClick={hideSideBar}
+								/>
+
+								<button
+									to=""
+									onClick={hideSideBar}
+									className={`px-5 py-2 rounded-md bg-red-700 hover:bg-red-800 active:bg-red-600 ${
+										mode === "light"
+											? "text-white"
+											: "text-white"
+									}`}
+								>
+									Logout
+								</button>
+							</>
+						)}
 					</div>
 					{/*HAMBURGER */}
 					<GiHamburgerMenu
