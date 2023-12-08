@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import MyContext from "../../context/data/MyContext";
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
@@ -12,19 +12,15 @@ function Navbar() {
 
 	const context = useContext(MyContext);
 	const { mode, toggleMode } = context;
+	const hideSideBar = () => setOpen(!open);
 
-	function handleHamburger() {
-		setOpen(!open);
-		console.log(open);
-	}
 	return (
 		<>
 			<header
-				className={`header-container mb-5 sticky w-1[100vw] ${
-					mode === "light"
-						? "bg-white text-black"
-						: "bg-[#212121] text-white"
+				className={`${
+					mode === "light" ? "bg-white " : "bg-[#2f2f2f] "
 				}`}
+				id="header-container"
 			>
 				{/*PUSH NOTIFICATION*/}
 				<p className="text-center bg-green-500 text-md text-white py-1">
@@ -49,24 +45,32 @@ function Navbar() {
 
 					{/*NAV-LINKS*/}
 					<div
-						className={`flex items-center gap-4 text-md  ${
-							open ? "right-0 " : "right-[-200px] "
-						} ${
-							mode === "light"
-								? "bg-white text-black"
-								: "bg-[#212121] text-white"
-						}`}
+						className={`flex items-center gap-4 text-md 
+						${open ? "right-0  " : "right-[-300px] "} 
+						${mode === "light" ? "bg-white " : "bg-[#2f2f2f] "}`}
 						id="navlinks"
+						onClick={hideSideBar}
 					>
-						<NavLink to="/all_products">All Products</NavLink>
-						<NavLink to="/order">Order</NavLink>
-						<NavLink to="/dashboard">Admin</NavLink>
-						<NavLink to="">Logout</NavLink>
-						<NavLink to="">Login</NavLink>
+						<NavLink to="/all_products" onClick={hideSideBar}>
+							All Products
+						</NavLink>
+						<NavLink to="/order" onClick={hideSideBar}>
+							Order
+						</NavLink>
+						<NavLink to="/dashboard" onClick={hideSideBar}>
+							Admin
+						</NavLink>
+						<NavLink to="" onClick={hideSideBar}>
+							Logout
+						</NavLink>
+						<NavLink to="" onClick={hideSideBar}>
+							Login
+						</NavLink>
 						<img
 							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrBWPQ3eQmMBLPFLRr5gLrySx-rrkp8NRK5mzynUlQL_8hQf9FbgxZaxRBDRw6Y3e_QhM&usqp=CAU"
 							alt=""
 							className="w-10 rounded-full"
+							onClick={hideSideBar}
 						/>
 
 						<div
@@ -80,16 +84,22 @@ function Navbar() {
 								<MdDarkMode className="text-3xl" />
 							)}
 						</div>
-						<NavLink to="/cart" className="flex items-center gap-2">
+						<NavLink
+							to="/cart"
+							className="flex items-center gap-2"
+							onClick={hideSideBar}
+						>
 							<FiShoppingCart className="text-3xl" />
 							<span>10</span>
 						</NavLink>
 					</div>
 					{/*HAMBURGER */}
 					<GiHamburgerMenu
-						className="text-4xl cursor-pointer hover:text-orange-400 "
+						className={`text-4xl cursor-pointer ${
+							open ? "text-yellow-500" : ""
+						}`}
 						id="hamburger"
-						onClick={handleHamburger}
+						onClick={() => setOpen(!open)}
 					/>
 				</nav>
 			</header>

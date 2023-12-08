@@ -7,7 +7,7 @@ function Layout({ children }) {
   return (
     <div>
       <Navbar />
-      <div className="p-5">
+      <div className="p-5 mt-[90px]">
         <Outlet />
       </div>
       <Footer />

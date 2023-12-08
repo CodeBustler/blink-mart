@@ -22,34 +22,31 @@
 #hamburger {
 	display: none;
 }
-header {
+
+#header-container {
 	position: fixed;
 	top: 0;
-	width: 100vw;
-	z-index: 5;
+	width: 100%;
+	z-index: 100;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-width: 800px) {
-	body {
-		position: relative;
-	}
-
 	#navlinks {
 		flex-direction: column;
 		position: absolute;
 		top: 90px;
 		height: calc(100vh - 90px);
-		padding: 30px;
+		padding: 40px 30px;
 		align-items: start;
 		width: 200px;
-		border-left: 0.5px dimgray solid;
 		z-index: -1;
 		transition: all 0.4s;
+		filter: drop-shadow(0 35px 35px rgba(0, 0, 0, 0.25));
 	}
 
 	#navlinks a:hover {
-		transform: translateY(0px);
+		transform: translateY(0);
 	}
 
 	#hamburger {
