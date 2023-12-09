@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import MyContext from "../../context/data/MyContext";
 import "./filter.css";
-
+import { CiFilter } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 
 function Filter() {
@@ -35,25 +35,24 @@ function Filter() {
 					placeholder="Search here"
 					className="bg-transparent outline-none w-[100%] "
 				/>
-				<button></button>
 			</div>
 
 			{/*FILTER OPTION*/}
 			<div className="flex flex-wrap gap-5" id="filter">
 				<select
-					className={`px-3 py-2 rounded-md outline-none  border border-r-[10px] border-transparent cursor-pointer  ${
+					className={`px-3 py-2 rounded-md outline-none  border border-r-[10px] border-gray-500 cursor-pointer  ${
 						mode === "light" && "border border-gray-400"
 					} `}
 					style={darkMode}
 				>
-					<option default>Product</option>
+					<option default>Category</option>
 					<option value="jacket">Jacket</option>
 					<option value="shirt">Shirt</option>
 					<option value="mobile">Mobile</option>
 					<option value="jacket">Jacket</option>
 				</select>
 				<select
-					className={`px-3 py-2 rounded-md outline-none  border border-r-[10px] border-transparent cursor-pointer  ${
+					className={`px-3  py-2 rounded-md outline-none  border border-r-[10px] border-gray-500 cursor-pointer  ${
 						mode === "light" && "border border-gray-400"
 					} `}
 					style={darkMode}
@@ -66,7 +65,7 @@ function Filter() {
 					<option value="400">₹ 500</option>
 				</select>
 				<button
-					className="px-5 py-2 rounded-md bg-blue-700 hover:bg-blue-800 active:bg-blue-600"
+					className="px-5 py-2 rounded-md font-semibold bg-blue-500 hover:bg-blue-800 active:bg-blue-600"
 					style={{ color: mode === "light" ? "white" : "white" }}
 				>
 					Reset
