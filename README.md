@@ -25,3 +25,8 @@ Currently, two official plugins are available:
 8. ProductCard Component
 9. Testimonial Component
 10. Footer Component
+
+<!-- DAY 4 -->
+
+11. individual productInfo Component
+12. ScrollTo Functionality Added

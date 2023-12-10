@@ -52,7 +52,7 @@ function Navbar() {
 						onClick={hideSideBar}
 					>
 						<NavLink
-							to="/all_products"
+							to="/productInfo"
 							onClick={hideSideBar}
 							className="page"
 						>
