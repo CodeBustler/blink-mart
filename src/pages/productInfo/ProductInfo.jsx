@@ -19,10 +19,11 @@ function ProductInfo() {
 		<section className=" mt-[120px]">
 			<div className="flex  items-center md:items-start justify-center  flex-col md:flex-row gap-10 ">
 				{/*IMG*/}
-				<div className="  bg-white m-2 rounded-lg overflow-hidden ">
+				<div className=" w-[90%] object-center object-cover bg-red-400  lg:w-[35%]  m-2 rounded-lg overflow-hidden ">
 					<img
 						src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/41a4-vgETkL._SX300_SY300_QL70_FMwebp_.jpg"
 						alt=""
+						className="w-full h-full"
 					/>
 				</div>
 				{/*DETAIL*/}
@@ -37,7 +38,7 @@ function ProductInfo() {
 							<MdStar />
 							<MdStarBorder />
 						</div>
-						<div>1</div>
+						<div className="text-gray-500">1,869 Ratings</div>
 					</div>
 					<p className="text-gray-500">
 						Product description consectetur adipisicing elit elit
@@ -59,8 +60,8 @@ function ProductInfo() {
 					</div>
 					{/*BENEFITS*/}
 					<div
-						className={`flex flex-wrap justify-around md:justify-between gap-5 mt-10 border-t border-gray-800 pt-10 ${
-							mode === "light" ? "border-gray-200" : ""
+						className={`flex flex-wrap justify-around md:justify-between gap-4 mt-10 border-t border-gray-800 pt-10 ${
+							mode === "light" ? "border-t-gray-300" : ""
 						} `}
 					>
 						<div className="flex flex-col items-center gap-2  max-w-[100px] shadow-lg p-5 rounded-lg">
