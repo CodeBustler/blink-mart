@@ -30,7 +30,7 @@ function ProductInfo() {
 	console.log(id);
 	return (
 		<section className=" mt-[80px]">
-			{product ? (
+			{product && Object.keys(product).length > 0 ? (
 				<div className="flex  items-center md:items-start justify-center  flex-col md:flex-row gap-10 ">
 					{/*IMG*/}
 					<div className=" w-[90%] object-center object-cover   lg:w-[35%]  m-2 rounded-md overflow-hidden bg-white">
@@ -57,8 +57,8 @@ function ProductInfo() {
 								<MdStarBorder />
 							</div>
 							<div className="text-gray-500">
-								{/*{product.rating.rate} &nbsp; | &nbsp;*/}
-								{/*{product.rating.count}*/}
+								{product.rating.rate} &nbsp; | &nbsp;
+								{product.rating.count}
 								&nbsp; Ratings
 							</div>
 						</div>

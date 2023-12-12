@@ -8,16 +8,16 @@ function MyState(props) {
 	// FETCH STORE DATA
 	const fetchStoreData = async () => {
 		const obj = {
-			id: 22,
-			title: "MBJ Women's Solid Short Sleeve Boat Neck V ",
-			price: 9.85,
+			id: 21,
+			title: "DANVOUY Womens T Shirt Casual Cotton Short",
+			price: 12.99,
 			description:
-				"95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+				"95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
 			category: "women's clothing",
-			image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+			image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
 			rating: {
-				rate: 4.7,
-				count: 130,
+				rate: 3.6,
+				count: 145,
 			},
 		};
 
