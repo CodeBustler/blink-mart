@@ -15,9 +15,9 @@ function Filter() {
 
 	return (
 		<div
-			className="border-b border-gray-600 shadow-xl py-4 px-4  mb-5 flex gap-4 flex-wrap items-center justify-between  "
+			className="border-b border-gray-600 shadow-xl py-4 px-4 pt-5 mb-5 flex gap-4 flex-wrap items-center justify-between   z-10 "
 			style={{
-				backgroundColor: `${mode === "light" ? "#F3F4F6" : ""}`,
+				backgroundColor: `${mode === "light" ? "#F3F4F6" : "#2F2F2F"}`,
 				borderColor: `${mode === "light" ? "transparent" : ""}`,
 			}}
 		>
@@ -29,12 +29,12 @@ function Filter() {
 				style={darkMode}
 				id="searchInput"
 			>
-				<CiSearch className="text-2xl" />
 				<input
 					type="text"
 					placeholder="Search here"
 					className="bg-transparent outline-none w-[100%] "
 				/>
+				<CiSearch className="text-2xl font-cursor-pointer hover:text-orange-500 " />
 			</div>
 
 			{/*FILTER OPTION*/}

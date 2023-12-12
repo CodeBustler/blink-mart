@@ -30,7 +30,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/productInfo" element={<ProductInfo />} />
+            <Route path="/productInfo/:id" element={<ProductInfo />} />
             <Route path="/allProducts" element={<AllProducts />} />
           </Route>
           {/*ERROR PAGE*/}

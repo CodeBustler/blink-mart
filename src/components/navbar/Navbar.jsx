@@ -17,18 +17,18 @@ function Navbar() {
 	return (
 		<>
 			<header
-				className={`${
+				className={`  ${
 					mode === "light" ? "bg-[#F3F4F6] " : "bg-[#2f2f2f] "
 				}`}
 				id="header-container"
 			>
 				{/*PUSH NOTIFICATION*/}
-				<p className="text-center bg-green-500 text-md text-white py-1">
+				{/*	<p className="text-center bg-green-500 text-md text-white py-1">
 					50% Off Bumber Offer!
-				</p>
+				</p>*/}
 				{/*NAVBAR*/}
 				<nav
-					className={`navbar flex items-center justify-between py-3 px-4 shadow-xl `}
+					className={`navbar flex items-center justify-between py-3 px-4 shadow-md `}
 				>
 					{/*LOGO*/}
 					<Link

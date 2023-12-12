@@ -30,8 +30,8 @@
 	#navlinks {
 		flex-direction: column;
 		position: absolute;
-		top: 90px;
-		height: calc(100vh - 90px);
+		top: 58px;
+		height: calc(100vh - 58px);
 		padding: 40px 30px;
 		align-items: start;
 		width: 200px;

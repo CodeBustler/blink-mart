@@ -30,3 +30,12 @@ Currently, two official plugins are available:
 
 11. individual productInfo Component
 12. ScrollTo Functionality Added
+
+<!-- DAY 5 -->
+
+NA
+
+<!-- DAY 6 -->
+
+13. Cart Component
+14. Store API Added & displayed product Items
