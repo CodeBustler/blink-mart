@@ -19,7 +19,7 @@ function ProductInfo() {
 		<section className=" mt-[120px]">
 			<div className="flex  items-center md:items-start justify-center  flex-col md:flex-row gap-10 ">
 				{/*IMG*/}
-				<div className=" w-[90%] object-center object-cover bg-red-400  lg:w-[35%]  m-2 rounded-lg overflow-hidden ">
+				<div className=" w-[90%] object-center object-cover bg-red-400  lg:w-[35%]  m-2 rounded-md overflow-hidden ">
 					<img
 						src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/41a4-vgETkL._SX300_SY300_QL70_FMwebp_.jpg"
 						alt=""

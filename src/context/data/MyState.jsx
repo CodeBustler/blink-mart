@@ -17,6 +17,11 @@ function MyState(props) {
 		}
 	};
 
+	const data = fetch("https://fakestoreapi.com/products")
+		.then((res) => res.json())
+		.then((json) => console.log(json));
+
+	console.log(data);
 	return (
 		<MyContext.Provider value={{ mode, toggleMode }}>
 			{props.children}
